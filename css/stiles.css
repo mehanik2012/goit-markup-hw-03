@@ -1,0 +1,220 @@
+/* палітра документa */
+:root {
+  /* капелюх background  */
+  --white-primary: #ffffff;
+  /* background підвалу */
+  --black-background: #2f303a;
+  /* background секція наша команда і портфоліо*/
+  --our-tim-background: #f5f4fa;
+  /* основний колір тексту */
+  --text-color: #757575;
+  /* колір заголовків */
+  --text-titles-color: #212121;
+  /* колір акценту */
+  --accent-color: #2196f3;
+  --logo-color-header: #000000;
+  /* колір активного стану кнопки */
+  --button-active-color: #188ce8;
+}
+
+body {
+  background-color: var(--white-primary);
+  color: var(--text-color);
+
+  font-family: roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* загальні властивості тексту в логотипі */
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+/* властивості кольору логотипу heder*/
+.logo.logo-header {
+  color: var(--logo-color-header);
+}
+.logo.logo-header span {
+  color: var(--accent-color);
+}
+.logo-header:hover,
+.logo-header:focus {
+  color: var(--accent-color);
+}
+
+/* списки */
+.list {
+  list-style: none;
+}
+
+/* навігація */
+.site-nav a {
+  color: var(--text-titles-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .contakt {
+  color: var(--text-color);
+}
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--accent-color);
+}
+/* виділення поточної сторінки */
+.site-nav .curent {
+  color: var(--accent-color);
+}
+.link {
+  text-decoration: none;
+}
+
+/* оформлення заголовків в секціях */
+.section-title {
+  color: var(--text-titles-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+/* секція герой */
+.hero {
+  background-color: var(--black-background);
+}
+
+.hero-title {
+  color: var(--white-primary);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+/* оформлення кнопок */
+.button {
+  cursor: pointer;
+
+  background-color: var(--accent-color);
+  color: var(--white-primary);
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  border: none;
+}
+
+.button-radio {
+  color: var(--text-titles-color);
+  background: #f5f4fa;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+}
+.button.button-radio:hover,
+.button.button-radio:focus {
+  background-color: var(--accent-color);
+  color: var(--white-primary);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+.button:hover,
+.button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background: #188ce8;
+}
+.button:active {
+  background-color: var(--button-active-color);
+}
+/* секція наші переваги */
+.denefits {
+  font-size: 14px;
+  line-height: 1.14;
+
+  text-transform: uppercase;
+}
+
+/* секція наша команда */
+.our-tim {
+  background-color: var(--our-tim-background);
+}
+
+.card-name {
+  font-weight: 500;
+}
+.card-name,
+.card-profesion {
+  font-size: 16px;
+  line-height: 1.19;
+}
+/* секція портфоліо */
+.card-portfolio {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.examples {
+  font-size: 16px;
+  line-height: 30px;
+}
+/* підвал сайту */
+.footer-decor {
+  background-color: var(--black-background);
+}
+
+.footer-decor address {
+  font-style: normal;
+}
+.link-map {
+  color: var(--white-primary);
+}
+
+.link-map:hover,
+.link-map:focus {
+  color: var(--accent-color);
+}
+
+.link-addr {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.link-addr:hover,
+.link-addr:focus {
+  color: var(--accent-color);
+}
+/* властивості кольору логотпу footer */
+.logo.logo-footer {
+  color: var(--white-primary);
+}
+.logo.logo-footer span {
+  color: var(--accent-color);
+}
+.logo-footer:hover,
+.logo-footer:focus {
+  color: var(--accent-color);
+}
+/* приховування заголовкі секцій */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
