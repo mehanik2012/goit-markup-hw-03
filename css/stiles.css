@@ -15,6 +15,7 @@
   --logo-color-header: #000000;
   /* колір активного стану кнопки */
   --button-active-color: #188ce8;
+  --border-header: #ececec;
 }
 
 body {
@@ -26,32 +27,59 @@ body {
   line-height: 1.71;
 }
 
+/* списки */
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+/* секції */
+.container {
+  width: 1200px;
+  padding: 0 15px 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* загальні властивості тексту в логотипі */
 .logo {
+  margin-right: 93px;
+
+  color: var(--accent-color);
+
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
 /* властивості кольору логотипу heder*/
-.logo.logo-header {
+.logo-hader {
   color: var(--logo-color-header);
 }
-.logo.logo-header span {
-  color: var(--accent-color);
-}
-.logo-header:hover,
-.logo-header:focus {
-  color: var(--accent-color);
-}
-
-/* списки */
-.list {
-  list-style: none;
-}
-
 /* навігація */
-.site-nav a {
+.header-container {
+  border-bottom: 1px var(--border-header);
+}
+.nav-flex {
+  display: flex;
+  align-items: center;
+}
+
+.mail-tel {
+  margin-left: auto;
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--text-titles-color);
 
   font-weight: 500;
@@ -59,24 +87,35 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
 
 .site-nav .contakt {
   color: var(--text-color);
 }
-.site-nav a:hover,
-.site-nav a:focus {
+.site-nav .link:hover,
+.site-nav .link:focus {
   color: var(--accent-color);
+}
+
+.link {
+  text-decoration: none;
 }
 /* виділення поточної сторінки */
 .site-nav .curent {
   color: var(--accent-color);
 }
-.link {
-  text-decoration: none;
-}
 
 /* оформлення заголовків в секціях */
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   color: var(--text-titles-color);
 
   font-weight: 700;
@@ -89,12 +128,14 @@ body {
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   color: var(--white-primary);
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
 }
 /* оформлення кнопок */
@@ -138,28 +179,80 @@ body {
   background-color: var(--button-active-color);
 }
 /* секція наші переваги */
-.denefits {
+.list-denefits {
+  display: flex;
+}
+
+.list-denefits .item + .item {
+  margin-left: 30px;
+}
+
+.section-title.denefits {
+  margin-top: 0px;
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 1.14;
 
   text-transform: uppercase;
 }
 
+.text-denefits {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* секція наша команда */
+.list-our-tim {
+  display: flex;
+}
+.list-our-tim .item + .item {
+  margin-left: 30px;
+}
+.img-discr {
+  min-width: 270px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+  text-align: center;
+
+  background-color: var(--white-primary);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 .our-tim {
   background-color: var(--our-tim-background);
 }
 
-.card-name {
+.section-title.card-name {
   font-weight: 500;
 }
-.card-name,
+.section-title.card-name,
 .card-profesion {
   font-size: 16px;
   line-height: 1.19;
 }
+.card-name {
+  margin-bottom: 10px;
+}
+.card-profesion {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* чим займаємось */
+.list-our-works {
+  display: flex;
+}
+.list-our-works .item + .item {
+  margin-left: 30px;
+}
+
 /* секція портфоліо */
-.card-portfolio {
+.section-title.card-portfolio {
+  margin-top: 0px;
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -169,8 +262,15 @@ body {
   font-size: 16px;
   line-height: 30px;
 }
+.text-exemples {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* підвал сайту */
 .footer-decor {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--black-background);
 }
 
@@ -194,18 +294,24 @@ body {
 .link-addr:focus {
   color: var(--accent-color);
 }
+
 /* властивості кольору логотпу footer */
-.logo.logo-footer {
+.logo-footer {
   color: var(--white-primary);
 }
-.logo.logo-footer span {
-  color: var(--accent-color);
+
+/* утеліти */
+.centred {
+  text-align: center;
 }
-.logo-footer:hover,
-.logo-footer:focus {
-  color: var(--accent-color);
+.no-bottom-pading {
+  padding-bottom: 0;
 }
-/* приховування заголовкі секцій */
+
+.img-no-gap {
+  display: block;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
