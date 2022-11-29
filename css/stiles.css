@@ -311,7 +311,8 @@ body {
 }
 /* секція портфоліо */
 .section-title.card-portfolio {
-  margin-top: 0px;
+  margin-top: 20px;
+  margin-left: 24px;
   margin-bottom: 4px;
 
   font-size: 18px;
@@ -324,7 +325,7 @@ body {
 }
 
 .examples .item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 .examples {
   display: flex;
@@ -335,7 +336,8 @@ body {
 }
 .text-exemples {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-left: 24px;
+  margin-bottom: 20;
 }
 
 /* підвал сайту */
