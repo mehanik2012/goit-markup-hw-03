@@ -309,8 +309,6 @@ body {
 
 .list-button-radio {
   display: flex;
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 50px;
   justify-content: center;
 }
