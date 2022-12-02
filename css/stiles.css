@@ -178,7 +178,6 @@ body {
   text-transform: uppercase;
 }
 .hero .button {
-  padding-bottom: 200px;
   min-width: 216px;
   padding: 10px 32px;
 }
@@ -307,20 +306,18 @@ body {
   padding-top: 6px;
   min-width: 73px;
 }
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .list-button-radio {
   display: flex;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 50px;
+  justify-content: center;
 }
 .list-button-radio .item + .item {
   margin-left: 8px;
 }
-/* секція портфоліо */
+
 .cards-portfolio-desc {
   max-width: 370px;
   padding-top: 20px;
