@@ -16,6 +16,7 @@
   /* колір активного стану кнопки */
   --button-active-color: #188ce8;
   --border-header: #ececec;
+  --border-cards-portfolio: #eeeeee;
 }
 * {
   box-sizing: border-box;
@@ -33,8 +34,8 @@ body {
 .centred {
   text-align: center;
 }
-.section.no-bottom-pading {
-  padding-bottom: 0;
+.section.no-top-pading {
+  padding-top: 0;
 }
 
 .img-no-gap {
@@ -96,7 +97,7 @@ body {
 }
 /* навігація */
 .header-container {
-  border-bottom: 1px var(--border-header);
+  border-bottom: solid 1px var(--border-header);
 }
 .nav-flex {
   display: flex;
@@ -157,12 +158,16 @@ body {
 /* секція герой */
 .hero {
   background-color: var(--black-background);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
-  padding-top: 200px;
   margin-top: 0;
   margin-bottom: 30px;
+  max-width: 696px;
+  margin-right: auto;
+  margin-left: auto;
 
   color: var(--white-primary);
 
@@ -173,7 +178,7 @@ body {
   text-transform: uppercase;
 }
 .hero .button {
-  margin-bottom: 200px;
+  padding-bottom: 200px;
   min-width: 216px;
   padding: 10px 32px;
 }
@@ -212,7 +217,7 @@ body {
 .button:hover,
 .button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background: #188ce8;
+  background: var(--button-active-color);
 }
 .button:active {
   background-color: var(--button-active-color);
@@ -220,6 +225,9 @@ body {
 /* секція наші переваги */
 .list-denefits {
   display: flex;
+}
+.list-denefits .item {
+  width: 270px;
 }
 
 .list-denefits .item + .item {
@@ -248,10 +256,12 @@ body {
 .list-our-tim .item + .item {
   margin-left: 30px;
 }
-.img-discr {
+.img-desc {
   min-width: 270px;
   padding-bottom: 30px;
   padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   text-align: center;
 
@@ -299,6 +309,7 @@ body {
 }
 .portfolio {
   display: flex;
+  flex-wrap: wrap;
 }
 .list-button-radio {
   display: flex;
@@ -310,9 +321,17 @@ body {
   margin-left: 8px;
 }
 /* секція портфоліо */
+.cards-portfolio-desc {
+  max-width: 370px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border: 1px solid var(--border-cards-portfolio);
+  border-top: 0px;
+}
 .section-title.card-portfolio {
-  margin-top: 20px;
-  margin-left: 24px;
   margin-bottom: 4px;
 
   font-size: 18px;
@@ -330,14 +349,13 @@ body {
 .examples {
   display: flex;
   flex-wrap: wrap;
-
-  font-size: 16px;
-  line-height: 30px;
 }
 .text-exemples {
   margin-top: 0;
-  margin-left: 24px;
-  margin-bottom: 20;
+  margin-bottom: 0;
+
+  font-size: 16px;
+  line-height: 30px;
 }
 
 /* підвал сайту */
